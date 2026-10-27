@@ -1,0 +1,898 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ConsultationSection from '../../../components/ConsultationSection.astro';
+import ImagePlaceholder from '../../../components/ImagePlaceholder.astro';
+import MissionVisionCard from '../../../components/MissionVisionCard.astro';
+import { COMPANY_STATS } from '../../../data/stats';
+---
+
+<Layout title="About Us — Pearl Infotech" description="Pearl Infotech is a growing team of creative, strategic, and professional engineers for software development in Australia since 2018." activeNav="about">
+  <!-- Page Header / Sub-Banner -->
+  <section class="about-hero page-sub-banner">
+    <div class="sub-banner-glow"></div>
+    <div class="sub-banner-pattern" aria-hidden="true"></div>
+    <div class="container sub-banner-container">
+          <div class="breadcrumb-pill">
+            <a href="/it/" class="breadcrumb-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <span>Home</span>
+            </a>
+            <span class="sep" aria-hidden="true">/</span>
+            <span class="current">About Us</span>
+          </div>
+      <div class="header-content">
+          <span class="sub-banner-eyebrow">ABOUT COMPANY</span>
+          <h1 class="page-title">Let Us Be Your Preferred IT Partner</h1>
+          <p class="page-desc">
+            Building long-term, high-trust technology partnerships with enterprises, businesses, and agencies across Australia and worldwide.
+          </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Overview Section -->
+  <section class="section about-overview-section">
+    <div class="container">
+      <div class="about-overview-grid">
+        <!-- Visual Column (Left): Overlapping Image Collage with Floating About Us Badge -->
+        <div class="overview-visual-col">
+          <div class="collage-wrapper">
+            <!-- Background Decorative Wave Graphic & Halftone -->
+            <div class="collage-graphic-backdrop" aria-hidden="true">
+              <svg class="wave-graphic" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-40 220 C60 160, 160 280, 260 210 C320 170, 360 210, 420 180" stroke="#0087ca" stroke-width="2.5" opacity="0.85" stroke-linecap="round"/>
+                <path d="M-40 240 C50 180, 150 290, 250 225 C310 185, 350 225, 420 195" stroke="#38bdf8" stroke-width="2" opacity="0.65" stroke-linecap="round"/>
+                <path d="M-40 260 C40 200, 140 300, 240 240 C300 200, 340 240, 420 210" stroke="#0284c7" stroke-width="1.5" opacity="0.45" stroke-linecap="round"/>
+                <path d="M-40 280 C30 220, 130 310, 230 255 C290 215, 330 255, 420 225" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+              </svg>
+              <div class="halftone-pattern" aria-hidden="true"></div>
+            </div>
+
+            <!-- Top Left Image: Team standing in office -->
+            <div class="collage-img-box collage-img-top">
+              <ImagePlaceholder
+                src="/assets/images/works-about.jpg"
+                alt="Pearl Infotech Engineering Team Mentoring & Reviewing"
+                class="collage-photo"
+                width={360}
+                height={270}
+                loading="lazy"
+                label="Pearl Infotech Team"
+              />
+            </div>
+
+            <!-- Bottom Left Image: Team collaborating around laptop -->
+            <div class="collage-img-box collage-img-bottom">
+              <ImagePlaceholder
+                src="/assets/images/mission-man.jpg"
+                alt="Pearl Infotech Developers Collaborating with Devices"
+                class="collage-photo"
+                width={330}
+                height={250}
+                loading="lazy"
+                label="Software Collaboration"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Column (Right) -->
+        <div class="overview-content-col">
+          <span class="eyebrow">Preferred IT Partner</span>
+          <h2 class="overview-heading">
+            Let Us Be Your <span>Preferred IT Partner</span>
+          </h2>
+          <p class="overview-para">
+            Pearl Infotech is a growing team of creative, strategic, and professional engineers for software development in Australia. We specialists in Website development, Software development and Mobile applications for Android and iPhone Operating System.
+          </p>
+          <p class="overview-para">
+            Pearl Infotech has been developing cutting edge, quality web development / mobile applications since 2018, but our experience in the technology industry reaches back much farther than this. We offer consultation services to help you break into the the exciting world of mobile or if you're already in it, we can help your business reach new heights.
+          </p>
+          <p class="overview-para">
+            Our team consists of Mobile Development and work on different mobile OS like Windows CE, Symbian, Blackberry, Android and iPhone. It is our continuous endeavor to make Pearl Infotech a global enterprise, reaching across to the world with its product and service for customer benefits in the field of Technology. Quality, Support, Adaptability and Creativity will always be our priorities in our software.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="mission-vision-grid">
+        <MissionVisionCard
+          type="mission"
+          statement="To develop solutions that help companies to compete and grow in digital era."
+        />
+
+        <MissionVisionCard
+          type="vision"
+          statement="To become a leading technology partner for small to medium enterprises."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Methodology Steps (Next-Gen Connected Visual Journey) -->
+  <section class="section how-we-work-section">
+    <div class="container">
+      <div class="section-header work-section-header">
+        <span class="eyebrow">WORK METHODOLOGY</span>
+        <h2 class="section-title">How We Turn Ideas Into <span>Reality</span></h2>
+        <p class="section-desc">
+          A transparent, collaborative journey from first conversation to long-term success.
+        </p>
+      </div>
+
+      <!-- Connected Flowing Timeline Journey -->
+      <div class="journey-track-wrapper">
+        <!-- Flowing Gradient Guide Line (Desktop) -->
+        <div class="journey-connector" aria-hidden="true">
+          <div class="connector-line"></div>
+          <div class="connector-glow-pulse"></div>
+        </div>
+
+        <div class="journey-grid">
+          <!-- Stage 01: Discovery -->
+          <div class="journey-node" data-stage="1">
+            <div class="node-marker" aria-hidden="true">
+              <span class="marker-pulse"></span>
+              <span class="marker-dot"></span>
+            </div>
+
+            <div class="node-card">
+              <div class="node-card-sheen"></div>
+              <div class="node-header">
+                <div class="node-number-halo">
+                  <span class="node-oversized-num">01</span>
+                </div>
+                <div class="node-icon-box icon-discovery">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="node-meta-badge">STAGE 01 • DISCOVERY</div>
+              <h4 class="node-title">Introduction / Discovery Meeting</h4>
+              <p class="node-description">
+                This is where we consult with you to find out the facts, information, fine points of your business. We work with you strongly to know your requirements and ideas of what the website is invented to achieve. We search out within your business pattern and assist you to set up the scope in budget and define a job and complete work proposal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 02: Planning & Design -->
+          <div class="journey-node" data-stage="2">
+            <div class="node-marker" aria-hidden="true">
+              <span class="marker-pulse"></span>
+              <span class="marker-dot"></span>
+            </div>
+
+            <div class="node-card">
+              <div class="node-card-sheen"></div>
+              <div class="node-header">
+                <div class="node-number-halo">
+                  <span class="node-oversized-num">02</span>
+                </div>
+                <div class="node-icon-box icon-planning">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="node-meta-badge">STAGE 02 • ARCHITECTURE</div>
+              <h4 class="node-title">Project Planning & Product Design</h4>
+              <p class="node-description">
+                We will span out the fine points and conclude what type of plan, programming, function, etc., is finest for the individual solution to your website development wants. Once we agree on the total path, we will filter the document design concept. We will make firm suggestions established on our experience and know-how.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 03: Progress & QA -->
+          <div class="journey-node" data-stage="3">
+            <div class="node-marker" aria-hidden="true">
+              <span class="marker-pulse"></span>
+              <span class="marker-dot"></span>
+            </div>
+
+            <div class="node-card">
+              <div class="node-card-sheen"></div>
+              <div class="node-header">
+                <div class="node-number-halo">
+                  <span class="node-oversized-num">03</span>
+                </div>
+                <div class="node-icon-box icon-testing">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="node-meta-badge">STAGE 03 • SPRINT & QA</div>
+              <h4 class="node-title">Project Progress, Demo & Testing</h4>
+              <p class="node-description">
+                Our internal process starts with your agreement and then creating a professional website for requirements. When the web site work is going on you can view its progress on a link provided by us. The site is tried and tested before it is delivered to u. A demo is given to our customers to know how to use the site and maintain it.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stage 04: Launch & Lifetime Support -->
+          <div class="journey-node" data-stage="4">
+            <div class="node-marker" aria-hidden="true">
+              <span class="marker-pulse"></span>
+              <span class="marker-dot"></span>
+            </div>
+
+            <div class="node-card">
+              <div class="node-card-sheen"></div>
+              <div class="node-header">
+                <div class="node-number-halo">
+                  <span class="node-oversized-num">04</span>
+                </div>
+                <div class="node-icon-box icon-launch">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                    <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                    <path d="M9 12H4s.55-3.03 2-4.5c1.62-1.63 5-2 5-2"></path>
+                    <path d="M12 15v5s3.03-.55 4.5-2c1.63-1.62 2-5 2-5"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="node-meta-badge">STAGE 04 • Go Live</div>
+              <h4 class="node-title">Go Live</h4>
+              <p class="node-description">
+                The final stage of the site’s creation is Installation. Once it is verified that the web site functions in desired form, it is published on your public Web server for common people to catch a glimpse of it. After confirmation site is submitted to search engines and directories. Lifetime maintenance and support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Section -->
+  <ConsultationSection
+    title="Ready to Build <span>Your Project?</span>"
+    subtitle="Let's discuss how our engineering team can build your next digital asset."
+  />
+</Layout>
+
+<style>
+  .page-sub-banner {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 29, 76, 0.78) 0%, rgba(0, 75, 140, 0.68) 50%, rgba(0, 135, 202, 0.62) 100%),
+                url('/assets/images/sub-banner-bg.jpg') center/cover no-repeat;
+    color: #ffffff;
+    padding: clamp(3.5rem, 5.5vw, 4.75rem) 0 clamp(3.5rem, 6vw, 5rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .sub-banner-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 600px 320px at 85% 20%, rgba(0, 135, 202, 0.35), transparent 70%),
+      radial-gradient(ellipse 450px 280px at 15% 85%, rgba(0, 135, 202, 0.2), transparent 70%);
+    z-index: 0;
+  }
+
+  .sub-banner-pattern {
+    position: absolute;
+    right: -6vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(280px, 35vw, 460px);
+    height: clamp(280px, 35vw, 460px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 0 0 2.5rem rgba(255, 255, 255, 0.02),
+      0 0 0 5rem rgba(255, 255, 255, 0.015),
+      0 0 0 7.5rem rgba(255, 255, 255, 0.01);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .sub-banner-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(2rem, 4vw, 3.5rem);
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .about-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  /* Supporting Hero Image */
+  .about-hero-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-media-card {
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    padding: 8px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 24px 60px -12px rgba(10, 16, 32, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+  }
+
+  :global(.hero-supporting-img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+
+  /* Breadcrumb Pill */
+  .breadcrumb-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 0.8125rem;
+    color: #CBD5E1;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--color-primary-subtle);
+    transition: color var(--transition-fast);
+  }
+
+  .breadcrumb-link:hover {
+    color: #fff;
+  }
+
+  .breadcrumb-pill .sep {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .breadcrumb-pill .current {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .header-content {
+    max-width: 680px;
+  }
+
+  .sub-banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  .sub-banner-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 1.25rem;
+    height: 2px;
+    background-color: #fff;
+    border-radius: var(--radius-sm);
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.125rem;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+
+  .page-desc {
+    font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+    line-height: 1.7;
+    color: #fff;
+  }
+
+  /* Overview Section: 2-Column Layout matching Image 2 */
+  .about-overview-section {
+    padding-top: clamp(3.5rem, 6vw, 5.5rem);
+    padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .about-overview-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1.15fr;
+    gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .about-overview-grid {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+  }
+
+  /* Left Column: Overlapping Collage & Decorative Waves */
+  .overview-visual-col {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .collage-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    height: 480px;
+  }
+
+  @media (max-width: 540px) {
+    .collage-wrapper {
+      height: 400px;
+    }
+  }
+
+  /* Background Decorative Graphic (Left wave lines + Halftone dots) */
+  .collage-graphic-backdrop {
+    position: absolute;
+    left: -40px;
+    bottom: -20px;
+    width: 320px;
+    height: 260px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wave-graphic {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .halftone-pattern {
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+    width: 140px;
+    height: 140px;
+    background-image: radial-gradient(#0087ca 1.5px, transparent 1.5px);
+    background-size: 14px 14px;
+    opacity: 0.35;
+  }
+
+  /* Collage Image Boxes */
+  .collage-img-box {
+    position: absolute;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: 0 20px 45px -10px rgba(0, 29, 76, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  /* Top-left image */
+  .collage-img-top {
+    top: 0;
+    left: 0;
+    width: 68%;
+    height: 62%;
+    z-index: 1;
+  }
+
+  /* Bottom-left image */
+  .collage-img-bottom {
+    bottom: 0;
+    left: 18%;
+    width: 84%;
+    height: 60%;
+    z-index: 2;
+    border: 5px solid #ffffff;
+  }
+
+  :global(.collage-photo) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .badge-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.2vw, 1.85rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    letter-spacing: -0.025em;
+    margin: 0;
+    line-height: 1;
+  }
+
+  /* Right Column: Typography matching Image 2 */
+  .overview-content-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .overview-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    letter-spacing: -0.03em;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+  }
+
+  .overview-para {
+    font-size: clamp(0.95rem, 1.05vw, 1.03125rem);
+    line-height: 1.75;
+    color: var(--color-body);
+    margin-bottom: 1.25rem;
+  }
+
+  .overview-para:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Mission & Vision */
+  .mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.75rem, 3vw, 2.5rem);
+    align-items: stretch;
+  }
+
+  @media (max-width: 767.98px) {
+    .mission-vision-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  /* Next-Gen Work Methodology: Connected Timeline Journey */
+  .how-we-work-section {
+    padding-top: clamp(4rem, 6.5vw, 6rem);
+    padding-bottom: clamp(4rem, 6.5vw, 6.5rem);
+    position: relative;
+    background: linear-gradient(180deg, var(--color-bg-main) 0%, #f6f9fe 50%, var(--color-bg-main) 100%);
+    overflow: hidden;
+  }
+
+  .work-section-header {
+    margin-bottom: clamp(3rem, 5.5vw, 4.5rem);
+  }
+
+  .journey-track-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Flowing Gradient Connector Line (Desktop) */
+  .journey-connector {
+    position: absolute;
+    top: 15px; /* Centers with 16px marker dots inside 32px height container */
+    left: calc(12.5% + 8px);
+    right: calc(12.5% + 8px);
+    height: 2px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media (max-width: 1023.98px) {
+    .journey-connector {
+      display: none;
+    }
+  }
+
+  /* Hide node-marker on md and lg devices (641px to 1199.98px) */
+  @media (min-width: 641px) and (max-width: 1023.98px) {
+    .node-marker {
+      display: none !important;
+    }
+  }
+
+  .connector-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #0087ca 0%, #38bdf8 50%, #0087ca 100%);
+    border-radius: var(--radius-sm);
+  }
+
+  .connector-glow-pulse {
+    position: absolute;
+    inset: -2px 0;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.7), transparent);
+    filter: blur(3px);
+    animation: flowPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes flowPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  /* 4-Node Journey Grid */
+  .journey-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.25rem, 2vw, 1.75rem);
+    align-items: stretch;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: 1023.98px) {
+    .journey-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  .journey-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    animation: journeyFadeIn 300ms ease-out both;
+  }
+
+  @keyframes journeyFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Node Marker Pin */
+  .node-marker {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .marker-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #0087ca;
+    box-shadow: 0 0 0 4px #0087ca, 0 2px 8px rgba(0, 29, 76, 0.2);
+    z-index: 2;
+    transition: all var(--transition-base);
+  }
+
+  .marker-pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: rgba(0, 135, 202, 0.22);
+    animation: pingDot 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes pingDot {
+    75%, 100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+
+  /* Node Card Surface */
+  .node-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    padding: clamp(1.75rem, 2.2vw, 2.25rem);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+    box-shadow: var(--shadow-soft-sm), 0 4px 16px -4px rgba(0, 29, 76, 0.04);
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+    box-sizing: border-box;
+  }
+
+  .node-card-sheen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-primary) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+
+  /* Node Header */
+  .node-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .node-number-halo {
+    display: flex;
+    align-items: center;
+  }
+
+  .node-oversized-num {
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform var(--transition-base);
+  }
+
+  .node-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--card-radius);
+    background: var(--color-primary-subtle);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    border: 1px solid #0087ca33;
+  }
+
+  .node-meta-badge {
+    font-family: var(--font-heading);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .node-title {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 0.875rem;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    min-height: 3.25rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .node-description {
+    font-size: 0.9375rem;
+    color: var(--color-body);
+    line-height: 1.65;
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+
+  /* Mobile Timeline: Convert to Vertical Line on Left Side */
+  @media (max-width: 640px) {
+    .journey-track-wrapper {
+      position: relative;
+      padding-left: 1.75rem;
+    }
+
+    .journey-track-wrapper::before {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      bottom: 2rem;
+      left: 15px; /* Centered with vertical 16px dot */
+      width: 2px;
+      background: linear-gradient(180deg, #0087ca 0%, #38bdf8 50%, #0087ca 100%);
+      border-radius: var(--radius-sm);
+      z-index: 1;
+    }
+
+    .journey-grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    .journey-node {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .node-marker {
+      display: flex;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 0;
+      margin-top: 1.25rem;
+      margin-left: -1.75rem;
+      z-index: 2;
+    }
+
+    .node-card {
+      width: 100%;
+    }
+
+    .node-title {
+      min-height: auto;
+    }
+  }
+
+  /* Accessibility: Prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .journey-node {
+      animation: none !important;
+      transition: none !important;
+    }
+    .connector-glow-pulse,
+    .marker-pulse {
+      animation: none !important;
+    }
+    .node-card,
+    .marker-dot,
+    .node-oversized-num,
+    .node-icon-box {
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+</style>

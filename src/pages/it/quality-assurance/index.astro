@@ -1,0 +1,29 @@
+---
+import ServicePageLayout from '../../../layouts/ServicePageLayout.astro';
+
+const description = [
+  "Pearl Infotech is one of the best software quality assurance testing company. The company has a great team of software testers who are highly experienced. The company provides various services such as mobile quality assurance testing, web QA testing, software QA testing services, etc.",
+  "Pearl Infotech uses various software testing services, and our aim is to be the best QA Company in India. Software analysis can be done manually and through automation tools. They have their significance in various phases of design and development."
+];
+
+const capabilities = [
+  "Manual Testing",
+  "Automation Engineering & Testing",
+  "Functional Testing",
+  "Regression Testing",
+  "Usability Testing",
+  "Compatibility Testing",
+  "Mobile Testing"
+];
+---
+
+<ServicePageLayout
+  serviceKey="qa"
+  title="Quality Assurance"
+  headline="FLAWLESS SOFTWARE DELIVERY"
+  tagline="Delivering bug-free, high-performance software through thorough manual and automated testing methods."
+  description={description}
+  capabilitiesTitle="Software Testing Services"
+  capabilities={capabilities}
+  heroImage="/assets/images/qa-uiux.jpg"
+/>

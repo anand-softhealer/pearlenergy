@@ -1,0 +1,456 @@
+/* ==========================================================================
+   Pearl Infotech — Design System Tokens & Base CSS
+   Palette Specifications:
+   - Primary Color: #0087CA
+   - Secondary / Dark: #001d4c
+   - Heading Color: #0e2b3d
+   - Body Text Color: #64748B
+   - Main Background: #FFFFFF
+   - Secondary Background: #F4F7FC
+   - Border Color: #E2E8F0
+   Typography:
+   - Font Family: 'Manrope', system-ui, -apple-system, sans-serif
+   - Headings: 600-800 weight
+   - Body / Text: 400-500 weight
+   - Navigation / UI / Buttons: 600-700 weight
+   ========================================================================== */
+
+:root {
+  /* Exact Colors Specified */
+  --color-primary: #0087CA;
+  --color-primary-hover: #006ca3;
+  --color-primary-active: #00537d;
+  --color-primary-subtle: #e8f5ff;
+  --color-primary-glow: rgba(0, 135, 202, 0.22);
+
+  --color-secondary: #001d4c;
+  --color-secondary-subtle: #0e2b3d;
+  --color-secondary-card: #001d4c;
+
+  --color-heading: #0e2b3d;
+  --color-body: #666666;
+  --color-body-dark: #0e2b3d;
+  --color-body-light: #94A3B8;
+
+  --color-bg-main: #FFFFFF;
+  --color-bg-secondary: #F4F7FC;
+  --color-bg-card: #FFFFFF;
+  --color-bg-dark: #111C3A;
+  --color-bg-darker: #0c142b;
+
+  --color-border: #E2E8F0;
+  --color-border-subtle: #edf2f7;
+  --color-border-dark: #22325c;
+  --color-border-focus: #0087CA;
+
+  --color-success: #10B981;
+  --color-success-bg: #ECFDF5;
+  --color-error: #EF4444;
+  --color-error-bg: #FEF2F2;
+
+  /* Typography System (Manrope) */
+  --font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-nav: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout & Spacing */
+  --container-max-width: 1280px;
+  --container-gutter: clamp(1.25rem, 3.5vw, 2.5rem);
+
+  /* Vertical Section Spacing: 96-120px desktop, 56-72px mobile */
+  --section-padding-desktop: clamp(6rem, 8vw, 7.5rem);
+  --section-padding-mobile: clamp(3.5rem, 6vw, 4.5rem);
+
+  /* Card and Button Specs */
+  --card-padding: clamp(1.75rem, 2.5vw, 1.5rem); /* 28px - 36px */
+  --card-radius: 16px;
+  --btn-radius: 16px;
+  --radius-sm: 10px;
+
+  /* Shadows: Soft & subtle, avoid heavy shadows */
+  --shadow-soft-sm: 0 1px 3px rgba(17, 28, 58, 0.04), 0 1px 2px rgba(17, 28, 58, 0.02);
+  --shadow-soft-md: 0 4px 12px rgba(17, 28, 58, 0.05), 0 1px 3px rgba(17, 28, 58, 0.03);
+  --shadow-soft-lg: 0 12px 28px -4px rgba(17, 28, 58, 0.07), 0 4px 10px -2px rgba(17, 28, 58, 0.03);
+  --shadow-soft-xl: 0 20px 40px -8px rgba(17, 28, 58, 0.09), 0 6px 14px -3px rgba(17, 28, 58, 0.04);
+  --shadow-primary: 0 8px 24px rgba(36, 87, 245, 0.22);
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  color: var(--color-body);
+  background-color: var(--color-bg-main);
+  line-height: 1.7;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-main);
+  color: var(--color-body);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--color-body);
+  font-size: clamp(1rem, 1.1vw, 1.125rem); /* 16px - 18px */
+  line-height: 1.7;
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+button, input, textarea, select {
+  font-family: var(--font-body);
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+}
+
+/* Vertical Section Spacing */
+.section {
+  padding-top: var(--section-padding-desktop);
+  padding-bottom: var(--section-padding-desktop);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+  }
+}
+
+.section-alt {
+  background-color: var(--color-bg-secondary);
+}
+
+.section-dark {
+  background-color: var(--color-bg-dark);
+  color: #FFFFFF;
+}
+
+/* Typography Scale */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.875rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(2.5rem, 5vw, 2rem);
+}
+
+.section-header.text-left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.section-title,
+.overview-heading,
+.artistic-heading,
+.feature-main-title,
+.form-title,
+.content-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4vw, 2.5rem); /* 36px - 48px */
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-heading);
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.section-title span,
+.overview-heading span,
+.artistic-heading span,
+.feature-main-title .highlight,
+.content-title span {
+  color: var(--color-primary);
+}
+
+.section-dark .section-title,
+.section-dark .overview-heading,
+.section-dark .artistic-heading,
+.section-dark .content-title {
+  color: #FFFFFF;
+}
+
+/* Consistent Section Descriptions across website */
+.section-desc,
+.section-header-desc,
+.form-subtitle,
+.works-about-paragraph {
+  font-size: clamp(1rem, 1.1vw, 1.125rem); /* 16px - 18px */
+  color: var(--color-body);
+  line-height: 1.7;
+}
+
+.section-header .section-desc,
+.section-header .section-header-desc {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-dark .section-desc,
+.section-dark .section-header-desc {
+  color: #CBD5E1;
+}
+
+/* Consistent Card Descriptions across website */
+.card-desc,
+.card-description,
+.card-text,
+.service-card-desc,
+.feature-card-desc,
+.node-description,
+.mv-statement,
+.step-desc,
+.cta-desc,
+.testimonial-quote {
+  font-size: clamp(0.9375rem, 1vw, 1rem); /* 15px - 16px */
+  color: var(--color-body);
+  line-height: 1.65;
+}
+
+/* Consistent Card Headings across website */
+.card-title,
+.card-heading,
+.service-card-title,
+.feature-card-title,
+.node-title,
+.mv-title,
+.info-title,
+.info-heading,
+.step-title,
+.cap-title,
+.sidebar-title,
+.cta-heading,
+.content-title,
+.testimonial-title,
+.capability-card h4,
+.tech-category-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-heading);
+  text-transform: capitalize;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+/* ==========================================================================
+   Consistent Button System across website
+   - Primary: Brand Sapphire Blue with White Text & crisp hover elevation
+   - Secondary / Outline: Clean Crisp White with Navy Text & Brand Blue hover
+   ========================================================================== */
+.btn,
+.hero-btn-primary,
+.hero-btn-secondary,
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9375rem; /* 15px */
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn svg,
+.hero-btn-primary svg,
+.hero-btn-secondary svg,
+.btn-submit svg {
+  transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Primary Button Design (Sapphire Blue, 16px Border Radius) */
+.btn-primary,
+.hero-btn-primary,
+.btn-submit {
+  background-color: var(--color-primary);
+  color: #FFFFFF !important;
+  border-color: var(--color-primary);
+  border-radius: var(--radius-sm) !important;
+}
+
+.btn-primary:hover,
+.hero-btn-primary:hover,
+.btn-submit:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover svg,
+.hero-btn-primary:hover svg,
+.btn-submit:hover svg {
+  transform: translateX(3px);
+}
+
+/* Secondary / Outline Button Design */
+.btn-secondary,
+.btn-outline,
+.btn-outline-light,
+.hero-btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:hover,
+.btn-outline:hover,
+.btn-outline-light:hover,
+.hero-btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+.btn-secondary:hover svg,
+.btn-outline:hover svg,
+.btn-outline-light:hover svg,
+.hero-btn-secondary:hover svg {
+  transform: rotate(45deg);
+}
+
+.btn-sm {
+  padding: 0.625rem 1.35rem;
+  font-size: 0.875rem; /* 14px */
+}
+
+.btn-lg {
+  padding: 1rem 2.25rem;
+  font-size: 1rem;
+}
+
+/* Card Styling: Clean, Soft Shadow, Crisp Border */
+.card-premium {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--shadow-soft-sm);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.card-premium:hover {
+  border-color: rgba(36, 87, 245, 0.35);
+  box-shadow: var(--shadow-soft-lg);
+  transform: translateY(-4px);
+}
+
+/* Form Controls */
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.9375rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--btn-radius);
+  background: #FFFFFF;
+  color: var(--color-heading);
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+}
+
+/* A11y Focus State */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

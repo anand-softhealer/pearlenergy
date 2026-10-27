@@ -1,0 +1,930 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const OPENINGS = [
+  {
+    id: "software-engineer",
+    title: "Software Engineer",
+    badge: "Engineering",
+    positions: "2 Open Positions",
+    experience: "3+ Years Experience",
+    type: "Full Time • On-site / Hybrid",
+    location: "Bella Vista NSW, Australia",
+    summary: "Seeking a passionate Software Engineer to work across our modern application ecosystem with JavaScript, PHP, MySQL, SQLite, AWS, Git, and agile sprints.",
+    experienceDetails: "Must have a minimum of 3 years of hands-on experience in a similar role. Strong foundation in JavaScript (ES6+), PHP, HTML5, CSS3, MySQL, SQLite, AWS services, Git/GitHub, and agile methodologies.",
+    duties: [
+      "Architect, develop, and maintain high-performance software modules and web platforms.",
+      "Collaborate in cross-functional agile sprints with designers, QA specialists, and product managers.",
+      "Work across varied technical areas of client systems, from database queries to frontend features.",
+      "Ensure clean, testable code, thorough code reviews, and enterprise-grade security practices.",
+      "Produce technical documentation and participate in client system release cycles."
+    ],
+    skills: ["JavaScript ES6+", "PHP", "MySQL", "AWS", "Git / GitHub", "Agile Sprints", "REST APIs"]
+  },
+  {
+    id: "developer-programmer",
+    title: "Developer Programmer",
+    badge: "Development",
+    positions: "2 Open Positions",
+    experience: "5+ Years Experience",
+    type: "Full Time • On-site / Hybrid",
+    location: "Bella Vista NSW, Australia",
+    summary: "Senior developer role leading client architecture, advanced JavaScript/React frameworks, WordPress/SilverStripe platforms, and robust database design.",
+    experienceDetails: "Bachelor or higher degree in Computer Science, Software Engineering or related discipline. Minimum 5 years of development experience with advanced JavaScript (ES6/React.js), CMS frameworks (WordPress, SilverStripe), MySQL database architecture, and cross-browser performance optimization.",
+    duties: [
+      "Write, debug, and maintain complex program code to meet strict technical specifications.",
+      "Lead technical development and maintenance for high-traffic client websites and web systems.",
+      "Research, evaluate, and implement state-of-the-art programming frameworks and database designs.",
+      "Champion web development best practices: accessibility, cross-device responsiveness, and security.",
+      "Produce user guides, system documentation, and operational procedures for client handoffs."
+    ],
+    skills: ["React.js", "JavaScript ES6", "WordPress & CMS", "MySQL Architecture", "Web Accessibility", "System Architecture"]
+  },
+  {
+    id: "analyst-programmer",
+    title: "Analyst Programmer",
+    badge: "Analysis & Code",
+    positions: "3 Open Positions",
+    experience: "2+ Years Experience",
+    type: "Full Time • On-site / Hybrid",
+    location: "Bella Vista NSW, Australia",
+    summary: "Analyze functional requirements, formulate workflow logic, translate business needs into clean code sequences, and conduct end-to-end testing.",
+    experienceDetails: "Minimum 2 to 3 years of relevant experience in software development and business requirements analysis. Strong analytical acumen, workflow diagramming, and systematic programming abilities.",
+    duties: [
+      "Identify client requirements by establishing close rapport with stakeholders and solution architects.",
+      "Arrange project specifications into structured programming sequences and workflow logic diagrams.",
+      "Encode project requirements into clean, efficient computer programs.",
+      "Execute operational testing, debugging, and program sequence modifications to ensure defect-free code.",
+      "Provide support and maintenance for live customer software applications."
+    ],
+    skills: ["Systems Analysis", "Workflow Design", "Full Stack Coding", "Testing & Debugging", "Client Requirements", "SQL"]
+  }
+];
+
+const PERKS = [
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>`,
+    title: "Competitive Compensation",
+    desc: "Market-leading salary packages with annual performance reviews and merit-based bonuses."
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>`,
+    title: "Health & Work-Life Balance",
+    desc: "Flexible hybrid working arrangements, wellness support, and realistic sprint cycles."
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`,
+    title: "Continuous Learning",
+    desc: "Sponsorship for certifications, cloud accreditations, and modern engineering workshops."
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>`,
+    title: "Modern Tech Stack",
+    desc: "Work with modern frameworks, cloud architectures, AI tools, and scalable DevOps tooling."
+  }
+];
+---
+
+<Layout
+  title="Careers — Pearl Infotech"
+  description="Join Pearl Infotech in Australia. Explore open software engineering, developer programmer, and analyst programmer career opportunities."
+  activeNav="career"
+>
+  <!-- Page Sub-Banner (Identical to About Us page) -->
+  <section class="career-hero page-sub-banner">
+    <div class="sub-banner-glow"></div>
+    <div class="sub-banner-pattern" aria-hidden="true"></div>
+    <div class="container sub-banner-container">
+      <div class="breadcrumb-pill">
+        <a href="/it/" class="breadcrumb-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Home</span>
+        </a>
+        <span class="sep" aria-hidden="true">/</span>
+        <span class="current">Career</span>
+      </div>
+
+      <div class="header-content">
+        <span class="sub-banner-eyebrow">CAREERS AT PEARL INFOTECH</span>
+        <h1 class="page-title">Build Your Future With Pearl Infotech</h1>
+        <p class="page-desc">
+          We are a team of passionate engineers, designers, and problem solvers building cutting-edge web, mobile, and cloud software solutions in Australia.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 01: Why Work With Us (Perks Grid) -->
+  <section class="section perks-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">CULTURE &amp; BENEFITS</span>
+        <h2 class="section-title">Why Join <span>Our Team?</span></h2>
+        <p class="section-desc">
+          At Pearl Infotech, we create a workplace where equality, technical innovation, and mutual support thrive every day.
+        </p>
+      </div>
+
+      <div class="perks-grid">
+        {PERKS.map((perk) => (
+          <div class="perk-card">
+            <div class="card-sheen" aria-hidden="true"></div>
+            <div class="perk-icon" set:html={perk.icon} />
+            <h3 class="perk-title">{perk.title}</h3>
+            <p class="perk-desc">{perk.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02: Open Positions -->
+  <section class="section section-alt open-roles-section" id="open-positions">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">CURRENT OPENINGS</span>
+        <h2 class="section-title">Explore <span>Open Roles</span></h2>
+        <p class="section-desc">
+          We are actively expanding our software engineering team in Sydney, Australia. Discover our open positions below.
+        </p>
+      </div>
+
+      <div class="openings-list">
+        {OPENINGS.map((job) => (
+          <article class="job-card" id={job.id}>
+            <div class="card-sheen" aria-hidden="true"></div>
+
+            <div class="job-main-header">
+              <div class="job-title-group">
+                <span class="job-badge">{job.badge}</span>
+                <h3 class="job-title">{job.title}</h3>
+                <div class="job-meta-row">
+                  <span class="meta-item">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                    </svg>
+                    {job.positions}
+                  </span>
+                  <span class="meta-sep">•</span>
+                  <span class="meta-item">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    {job.experience}
+                  </span>
+                  <span class="meta-sep">•</span>
+                  <span class="meta-item">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    {job.location}
+                  </span>
+                </div>
+              </div>
+
+              <div class="job-action-box">
+                <a href={`#apply-form?role=${encodeURIComponent(job.title)}`} class="btn btn-primary btn-sm apply-trigger-btn" data-role={job.title}>
+                  <span>Apply Now</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: Direct Job Application Form Section -->
+  <section class="section apply-section" id="apply-form">
+    <div class="container">
+      <div class="apply-card">
+        <div class="apply-header">
+          <span class="eyebrow">JOIN OUR TEAM</span>
+          <h2 class="section-title">Apply For <span>This Position</span></h2>
+          <p class="section-desc">
+            Submit your details and resume below. Our recruitment team responds to every qualified applicant within 2 business days.
+          </p>
+        </div>
+
+        <form id="careerApplicationForm" class="career-form" action="https://formsubmit.co/ajax/info@pearlenergy.com.au" method="POST" enctype="multipart/form-data" novalidate>
+          <input type="hidden" name="_to" value="info@pearlenergy.com.au" />
+          <input type="hidden" name="_subject" value="New Job Application from Pearl Infotech Careers Page" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <!-- Accessible status region -->
+          <div id="careerStatus" class="form-status-region" aria-live="polite"></div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="applicant-name" class="form-label">Full Name <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="applicant-name" name="full-name" class="form-input" placeholder="e.g. John Smith" required />
+              <span id="name-error" class="field-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="applicant-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="applicant-email" name="email" class="form-input" placeholder="john@example.com" required />
+              <span id="email-error" class="field-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="applicant-phone" class="form-label">Mobile Number <span class="required" aria-hidden="true">*</span></label>
+              <input type="tel" id="applicant-phone" name="phone" class="form-input" placeholder="+61 400 000 000" required />
+              <span id="phone-error" class="field-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="applicant-position" class="form-label">Select Position <span class="required" aria-hidden="true">*</span></label>
+              <select id="applicant-position" name="position" class="form-select" required>
+                <option value="">Select a role...</option>
+                <option value="Software Engineer">Software Engineer (3+ Years)</option>
+                <option value="Developer Programmer">Developer Programmer (5+ Years)</option>
+                <option value="Analyst Programmer">Analyst Programmer (2+ Years)</option>
+                <option value="Other / General Application">Other / General Technical Application</option>
+              </select>
+              <span id="position-error" class="field-error"></span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="applicant-portfolio" class="form-label">LinkedIn Profile / GitHub or Portfolio Link</label>
+              <input type="url" id="applicant-portfolio" name="portfolio" class="form-input" placeholder="https://linkedin.com/in/username or https://github.com/..." />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="applicant-cover" class="form-label">Cover Letter / Technical Summary</label>
+              <textarea id="applicant-cover" name="cover-letter" class="form-textarea" rows="4" placeholder="Briefly describe your background, tech stack, and why you would be a great fit..."></textarea>
+            </div>
+          </div>
+
+          <div class="apply-submit-row">
+            <button type="submit" id="careerSubmitBtn" class="btn btn-primary btn-submit btn-sm">
+              <span>Submit Job Application</span>
+            </button>
+            <p class="reassurance-text">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Applications are kept confidential and reviewed directly by our engineering leads.</span>
+            </p>
+          </div>
+
+          <div id="careerSuccess" class="form-feedback success" style="display: none;" role="status">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Thank you! Your application has been submitted to info@pearlenergy.com.au. Our hiring team will contact you shortly.</span>
+          </div>
+
+          <div id="careerError" class="form-feedback error" style="display: none;" role="alert">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>Unable to submit online. Please email your CV directly to <a href="mailto:info@pearlenergy.com.au?subject=Job%20Application">info@pearlenergy.com.au</a>.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Pre-fill position when clicking Apply Now on any job card
+  const applyBtns = document.querySelectorAll(".apply-trigger-btn");
+  const positionSelect = document.getElementById("applicant-position") as HTMLSelectElement | null;
+  const formSection = document.getElementById("apply-form");
+
+  applyBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const role = btn.getAttribute("data-role");
+      if (positionSelect && role) {
+        for (let i = 0; i < positionSelect.options.length; i++) {
+          if (positionSelect.options[i].value === role) {
+            positionSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      formSection?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  // Career Form Submission Handler
+  const form = document.getElementById("careerApplicationForm") as HTMLFormElement | null;
+  const submitBtn = document.getElementById("careerSubmitBtn") as HTMLButtonElement | null;
+  const successFeedback = document.getElementById("careerSuccess");
+  const errorFeedback = document.getElementById("careerError");
+  const statusEl = document.getElementById("careerStatus");
+
+  const nameInput = document.getElementById("applicant-name") as HTMLInputElement | null;
+  const emailInput = document.getElementById("applicant-email") as HTMLInputElement | null;
+  const phoneInput = document.getElementById("applicant-phone") as HTMLInputElement | null;
+
+  const nameErr = document.getElementById("name-error");
+  const emailErr = document.getElementById("email-error");
+  const phoneErr = document.getElementById("phone-error");
+  const posErr = document.getElementById("position-error");
+
+  const validate = () => {
+    let isValid = true;
+    if (nameInput && !nameInput.value.trim()) {
+      if (nameErr) nameErr.textContent = "Full name is required.";
+      nameInput.classList.add("is-invalid");
+      isValid = false;
+    } else if (nameErr && nameInput) {
+      nameErr.textContent = "";
+      nameInput.classList.remove("is-invalid");
+    }
+
+    if (emailInput && (!emailInput.value.trim() || !emailInput.validity.valid)) {
+      if (emailErr) emailErr.textContent = "Valid email address is required.";
+      emailInput.classList.add("is-invalid");
+      isValid = false;
+    } else if (emailErr && emailInput) {
+      emailErr.textContent = "";
+      emailInput.classList.remove("is-invalid");
+    }
+
+    if (phoneInput && !phoneInput.value.trim()) {
+      if (phoneErr) phoneErr.textContent = "Mobile number is required.";
+      phoneInput.classList.add("is-invalid");
+      isValid = false;
+    } else if (phoneErr && phoneInput) {
+      phoneErr.textContent = "";
+      phoneInput.classList.remove("is-invalid");
+    }
+
+    if (positionSelect && !positionSelect.value) {
+      if (posErr) posErr.textContent = "Please select a position.";
+      positionSelect.classList.add("is-invalid");
+      isValid = false;
+    } else if (posErr && positionSelect) {
+      posErr.textContent = "";
+      positionSelect.classList.remove("is-invalid");
+    }
+
+    return isValid;
+  };
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!validate()) {
+      if (statusEl) statusEl.textContent = "Please complete all required fields.";
+      return;
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting Application...";
+    }
+
+    const payload = {
+      name: nameInput?.value?.trim() || "",
+      email: emailInput?.value?.trim() || "",
+      phone: phoneInput?.value?.trim() || "",
+      position: positionSelect?.value || "",
+      portfolio: (document.getElementById("applicant-portfolio") as HTMLInputElement)?.value?.trim() || "",
+      coverLetter: (document.getElementById("applicant-cover") as HTMLTextAreaElement)?.value?.trim() || "",
+      _subject: `New Job Application: ${positionSelect?.value || 'Applicant'} - Pearl Infotech`,
+      _template: "table",
+      _captcha: "false"
+    };
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/info@pearlenergy.com.au", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+      if (res.ok) {
+        if (successFeedback) successFeedback.style.display = "flex";
+        form.reset();
+      } else {
+        if (errorFeedback) errorFeedback.style.display = "flex";
+      }
+    } catch {
+      if (errorFeedback) errorFeedback.style.display = "flex";
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<span>Submit Job Application</span>`;
+      }
+    }
+  });
+</script>
+
+<style>
+  /* Page Sub-Banner (Identical to About Us page sub-banner) */
+  .page-sub-banner {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 29, 76, 0.78) 0%, rgba(0, 75, 140, 0.68) 50%, rgba(0, 135, 202, 0.62) 100%),
+                url('/assets/images/sub-banner-bg.jpg') center/cover no-repeat;
+    color: #ffffff;
+    padding: clamp(3.5rem, 5.5vw, 4.75rem) 0 clamp(3.5rem, 6vw, 5rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .sub-banner-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 600px 320px at 85% 20%, rgba(0, 135, 202, 0.35), transparent 70%),
+      radial-gradient(ellipse 450px 280px at 15% 85%, rgba(0, 135, 202, 0.2), transparent 70%);
+    z-index: 0;
+  }
+
+  .sub-banner-pattern {
+    position: absolute;
+    right: -6vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(280px, 35vw, 460px);
+    height: clamp(280px, 35vw, 460px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 0 0 2.5rem rgba(255, 255, 255, 0.02),
+      0 0 0 5rem rgba(255, 255, 255, 0.015),
+      0 0 0 7.5rem rgba(255, 255, 255, 0.01);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .sub-banner-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Breadcrumb Pill */
+  .breadcrumb-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 0.8125rem;
+    color: #CBD5E1;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--color-primary-subtle);
+    transition: color var(--transition-fast);
+  }
+
+  .breadcrumb-link:hover {
+    color: #fff;
+  }
+
+  .breadcrumb-pill .sep {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .breadcrumb-pill .current {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .header-content {
+    max-width: 680px;
+  }
+
+  .sub-banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  .sub-banner-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 1.25rem;
+    height: 2px;
+    background-color: #fff;
+    border-radius: var(--radius-sm);
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.125rem;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+
+  .page-desc {
+    font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+    line-height: 1.7;
+    color: #fff;
+  }
+
+  /* Perks Grid */
+  .perks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 1023px) {
+    .perks-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .perks-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .perk-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-soft-sm);
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .card-sheen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-primary) 50%, transparent 100%);
+    opacity: 1;
+  }
+
+  .perk-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-subtle);
+    border: 1px solid rgba(0, 135, 202, 0.2);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .perk-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 1.4vw, 1.35rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    margin-bottom: .875rem;
+    letter-spacing: -.015em;
+    line-height: 1.25;
+    text-transform: capitalize;
+  }
+
+  .perk-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-body);
+    margin: 0;
+  }
+
+  /* Open Positions Cards */
+  .openings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .job-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+    box-shadow: var(--shadow-soft-sm);
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .job-card:hover {
+    border-color: rgba(0, 135, 202, 0.35);
+    box-shadow: 0 16px 36px -8px rgba(0, 29, 76, 0.1);
+  }
+
+  .job-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .job-badge {
+    display: inline-block;
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: var(--color-primary-subtle);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.625rem;
+  }
+
+  .job-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.2vw, 1.875rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    margin-bottom: 0.625rem;
+    text-transform: capitalize;
+  }
+
+  .job-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.84375rem;
+    color: var(--color-body);
+    font-weight: 500;
+  }
+
+  .meta-item svg {
+    color: var(--color-primary);
+  }
+
+  .meta-sep {
+    color: #cbd5e1;
+    font-size: 0.8125rem;
+  }
+
+  @media (max-width: 767.98px){
+    .meta-sep{
+      display: none;
+    }
+  }
+
+  .job-summary {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-body);
+    margin-bottom: 1.75rem;
+  }
+
+  .job-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 860px) {
+    .job-details-grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  .details-heading {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 0.875rem;
+    text-transform: capitalize;
+  }
+
+  .details-text {
+    font-size: 0.90625rem;
+    line-height: 1.65;
+    color: var(--color-body);
+    margin-bottom: 1.25rem;
+  }
+
+  .skills-pill-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-pill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+  }
+
+  .duties-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .duties-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.90625rem;
+    line-height: 1.55;
+    color: var(--color-body);
+  }
+
+  .duty-check {
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  /* Application Form Card */
+  .apply-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    padding: clamp(2rem, 4vw, 3.5rem);
+    box-shadow: var(--shadow-soft-sm);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .apply-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 640px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: .5rem;
+    }
+  }
+
+  .full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  .form-label {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-heading);
+  }
+
+  .required {
+    color: var(--color-error, #ef4444);
+  }
+
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 0.8125rem 1rem;
+    font-size: 0.9375rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--btn-radius);
+    background: #ffffff;
+    color: var(--color-heading);
+    transition: all var(--transition-fast);
+  }
+
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  .form-input.is-invalid, .form-select.is-invalid {
+    border-color: var(--color-error, #ef4444);
+    background-color: #fff5f5;
+  }
+
+  .field-error {
+    font-size: 0.75rem;
+    color: var(--color-error, #ef4444);
+    font-weight: 500;
+    min-height: 1rem;
+  }
+
+  .form-status-region {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    min-height: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .apply-submit-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.875rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+
+  .reassurance-text {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: 0.8125rem;
+    color: #64748b;
+    margin: 0;
+    text-align: center;
+  }
+
+  .reassurance-text svg {
+    color: var(--color-primary);
+    flex-shrink: 0; margin-top: 3px;
+  }
+
+  .form-feedback.success {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: var(--btn-radius);
+    background-color: var(--color-success-bg, #ecfdf5);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #065f46;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  .form-feedback.error {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: var(--btn-radius);
+    background-color: var(--color-error-bg, #fef2f2);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #991b1b;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  .form-feedback.error a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+</style>

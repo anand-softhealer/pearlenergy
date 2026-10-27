@@ -1,0 +1,301 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ConsultationSection from '../../../components/ConsultationSection.astro';
+---
+
+<Layout title="Contact Us — Pearl Infotech" description="Get in touch with Pearl Infotech. Reach out to our specialist software development and mobile application engineers in Australia for a free consultation." activeNav="contact">
+  <!-- Page Header / Sub-Banner -->
+  <section class="contact-hero page-sub-banner">
+    <div class="sub-banner-glow"></div>
+    <div class="sub-banner-pattern" aria-hidden="true"></div>
+    <div class="container sub-banner-container">
+      <div class="breadcrumb-pill">
+        <a href="/it/" class="breadcrumb-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Home</span>
+        </a>
+        <span class="sep" aria-hidden="true">/</span>
+        <span class="current">Contact Us</span>
+      </div>
+      <div class="header-content">
+        <span class="sub-banner-eyebrow">CONTACT US</span>
+        <h1 class="page-title">Request a Free Technical Consultation &amp; Project Estimate</h1>
+        <p class="page-desc">
+          Reach out to the world’s most reliable IT services. We are here to help you scale, automate, and build custom web and mobile applications.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Contact Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-cards-grid">
+        <div class="contact-feature-card">
+          <div class="icon-bubble">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <h3 class="card-heading">Australian Head Office</h3>
+          <p class="card-description">
+            Suite 202 Building B, 20 Lexington Dr, Bella Vista NSW 2153, Australia
+          </p>
+          <a href="https://maps.google.com/?q=Suite+202+Building+B+20+Lexington+Dr+Bella+Vista+NSW+2153" target="_blank" rel="noopener noreferrer" class="card-action">
+            Open in Google Maps →
+          </a>
+        </div>
+
+        <div class="contact-feature-card">
+          <div class="icon-bubble">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h3 class="card-heading">Email Enquiries</h3>
+          <p class="card-description">
+            Send your business requirements, RFPs, or tech support requests to our direct inbox.
+          </p>
+          <a href="mailto:info@pearlenergy.com.au" class="card-action">
+            info@pearlenergy.com.au →
+          </a>
+        </div>
+
+        <div class="contact-feature-card">
+          <div class="icon-bubble">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="card-heading">Support & Availability</h3>
+          <p class="card-description">
+            Operating Mon–Fri 9:00 AM – 6:00 PM AEST with 24/7 dedicated support for managed clients.
+          </p>
+          <a href="#consultation-form" class="card-action">
+            Book Tech Consultation →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation Section (Exact same design as About Us page) -->
+  <ConsultationSection
+    title="Ready to Build <span>Your Project?</span>"
+    subtitle="Let's discuss how our engineering team can build your next digital asset."
+  />
+</Layout>
+
+<style>
+  /* Sub-Banner / Page Hero */
+  .page-sub-banner {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 29, 76, 0.78) 0%, rgba(0, 75, 140, 0.68) 50%, rgba(0, 135, 202, 0.62) 100%),
+                url('/assets/images/sub-banner-bg.jpg') center/cover no-repeat;
+    color: #ffffff;
+    padding: clamp(3.5rem, 5.5vw, 4.75rem) 0 clamp(3.5rem, 6vw, 5rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .sub-banner-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 600px 320px at 85% 20%, rgba(0, 135, 202, 0.35), transparent 70%),
+      radial-gradient(ellipse 450px 280px at 15% 85%, rgba(0, 135, 202, 0.2), transparent 70%);
+    z-index: 0;
+  }
+
+  .sub-banner-pattern {
+    position: absolute;
+    right: -6vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(280px, 35vw, 460px);
+    height: clamp(280px, 35vw, 460px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 0 0 2.5rem rgba(255, 255, 255, 0.02),
+      0 0 0 5rem rgba(255, 255, 255, 0.015),
+      0 0 0 7.5rem rgba(255, 255, 255, 0.01);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .sub-banner-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Breadcrumb Pill */
+  .breadcrumb-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 0.8125rem;
+    color: #CBD5E1;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--color-primary-subtle);
+    transition: color var(--transition-fast);
+  }
+
+  .breadcrumb-link:hover {
+    color: #fff;
+  }
+
+  .breadcrumb-pill .sep {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .breadcrumb-pill .current {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .header-content {
+    max-width: 780px;
+  }
+
+  .sub-banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.75rem;
+  }
+
+  .sub-banner-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 1.25rem;
+    height: 2px;
+    background-color: #fff;
+    border-radius: var(--radius-sm);
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.125rem;
+    color: #ffffff;
+  }
+
+  .page-desc {
+    font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+    line-height: 1.7;
+    color: #fff;
+    max-width: 65ch;
+  }
+
+  /* Contact Cards */
+  .contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 991px) {
+    .contact-cards-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  .contact-feature-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-soft-sm);
+    transition: all var(--transition-base);
+  }
+
+  .contact-feature-card:hover {
+    border-color: rgba(36, 87, 245, 0.4);
+    box-shadow: var(--shadow-soft-xl);
+    transform: translateY(-4px);
+  }
+
+  .icon-bubble {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--color-primary-subtle);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all var(--transition-base);
+  }
+
+  .contact-feature-card:hover .icon-bubble {
+    background: var(--color-primary);
+    color: #ffffff;
+    box-shadow: var(--shadow-primary);
+  }
+
+  .card-heading {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 0.625rem;
+    letter-spacing: -0.015em;
+    text-transform: capitalize;
+  }
+
+  .card-description {
+    font-size: 0.9375rem;
+    color: var(--color-body);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .card-action {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: gap var(--transition-fast), color var(--transition-fast);
+  }
+
+  .card-action:hover {
+    color: var(--color-primary-hover);
+    gap: 0.55rem;
+  }
+</style>

@@ -1,0 +1,2037 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ConsultationSection from '../components/ConsultationSection.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+import ClientAvatar from '../components/ClientAvatar.astro';
+import MissionVisionCard from '../components/MissionVisionCard.astro';
+import { COMPANY_STATS } from '../data/stats';
+import { TESTIMONIALS } from '../data/testimonials';
+---
+
+<Layout
+  title="Pearl Infotech — IT Solutions"
+  description="Pearl Infotech offers the latest IT solutions: Web Development, Android Development, iOS Development, Quality Assurance, UI/UX Design, and Wearables."
+  activeNav="home"
+>
+  <!-- Section 01: Hero & Company Introduction (Artistic Agency Layout) -->
+  <section class="hero-section">
+    <div class="hero-pattern-bg"></div>
+    <div class="hero-radial-glow"></div>
+    <div class="container hero-container">
+      <div class="hero-main-row">
+        <!-- Content Column -->
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span>PEARL INFOTECH • AUSTRALIA</span>
+          </div>
+          <h1 class="hero-title">
+            CREATING A BETTER <span class="highlight">IT SOLUTIONS</span>
+          </h1>
+          <p class="hero-description">
+            Pearl Infotech is a growing team of creative, strategic, and professional engineers for software development in Australia. We specialize in Website development, Software development and Mobile applications for Android and iPhone Operating Systems.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions-row">
+            <a href="/it/contact-us/" class="btn btn-primary btn-sm">
+              <span>Contact Us</span>
+            </a>
+            <a href="/it/about-us/" class="btn btn-secondary btn-sm">
+              <span>About Us</span>
+            </a>
+          </div>
+          
+          <!-- Artistic Dual Proof & Action Block -->
+          <div class="hero-dual-body">
+            <!-- 5.0 Star Rating Box -->
+            <div class="hero-rating-box">
+              <div class="rating-header">
+                <span class="rating-number">5.0</span>
+                <span class="rating-count">({COMPANY_STATS.projectsDelivered} Projects)</span>
+              </div>
+              <div class="rating-stars" aria-label="5 stars rating">
+                ★★★★★
+              </div>
+              <p class="rating-caption">Transforming digital processes for our clients</p>
+            </div>
+
+            <!-- Get Started Circular Interactive CTA -->
+            <div class="hero-cta-circle-wrap">
+              <p class="cta-micro-text">Transform every digital process with us.</p>
+              <a href="/it/contact-us/#consultation-form" class="hero-rotating-cta" aria-label="Start consultation with Pearl Infotech">
+                <svg class="cta-svg-text" viewBox="0 0 100 100" width="94" height="94">
+                  <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"></path>
+                  <text font-size="9.5" font-weight="700" letter-spacing="2.2px" fill="currentColor">
+                    <textPath href="#circlePath" startOffset="0%">• START NOW • IT SOLUTIONS •</textPath>
+                  </text>
+                </svg>
+                <span class="cta-center-arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Multi-Image Collage Column (Artistic Layout) -->
+        <div class="hero-image-column">
+          <div class="hero-collage">
+            <!-- Tall Left Image Card -->
+            <div class="collage-card collage-card-tall">
+              <img 
+                src="/assets/images/about-thumb-1.jpg" 
+                alt="Pearl Infotech Engineering Team Collaboration" 
+                class="collage-img"
+                width="400"
+                height="520"
+                loading="eager"
+              />
+            </div>
+
+            <!-- Stacked Right Column Image Cards -->
+            <div class="collage-right-stack">
+              <div class="collage-card collage-card-top">
+                <img 
+                  src="/assets/images/hero-banner-tech.jpg" 
+                  alt="Pearl Infotech Software Engineering" 
+                  class="collage-img"
+                  width="400"
+                  height="250"
+                  loading="eager"
+                />
+              </div>
+
+              <div class="collage-card collage-card-bottom">
+                <img 
+                  src="/assets/images/about-thumb-2.jpg" 
+                  alt="Pearl Infotech Quality Assurance & UI/UX" 
+                  class="collage-img"
+                  width="400"
+                  height="250"
+                  loading="eager"
+                />
+              </div>
+            </div>
+
+            <!-- Satisfied Client Pill Badge (Bottom Center) -->
+            <div class="hero-satisfied-badge">
+              <div class="badge-icon-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="badge-content">
+                <strong>{COMPANY_STATS.projectsDelivered}</strong>
+                <span>Projects Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artistic Scrolling Marquee Ticker -->
+  <div class="artistic-ticker-wrap" aria-hidden="true">
+    <div class="artistic-ticker">
+      <div class="ticker-track">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Web Development</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Mobile Applications</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Quality Assurance</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> UI/UX Design</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Wearable Apps</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Enterprise Software</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Cloud Solutions</span>
+      </div>
+      <div class="ticker-track" aria-hidden="true">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Web Development</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Mobile Applications</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Quality Assurance</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> UI/UX Design</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Wearable Apps</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Enterprise Software</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Cloud Solutions</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 02: What We Do (Artistic 4-Column Feature Panel Layout) -->
+  <section class="section section-features" id="features">
+    <div class="container">
+      <div class="artistic-feature-panel">
+        <div class="feature-layout-grid">
+          <!-- Column 1: Left Brand & Call to Action -->
+          <div class="feature-brand-col">
+            <div class="eyebrow">
+              <span>PEARL INFOTECH</span>
+            </div>
+            <h2 class="feature-main-title">
+              Latest IT Solutions <span class="highlight">for Your Business!</span>
+            </h2>
+            <div class="feature-cta-wrap">
+              <a href="/it/contact-us/#consultation-form" class="btn btn-primary btn-sm">
+                <span>Contact Us</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: IT Expertise -->
+          <div class="feature-card-col">
+            <div class="feature-card-circle-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="18" rx="3"></rect>
+                <line x1="2" y1="9" x2="22" y2="9"></line>
+                <circle cx="12" cy="15" r="3.2"></circle>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">IT Expertise</h3>
+            <p class="feature-card-desc">
+              We specialists in Website development, Software development and Mobile applications for Android and iPhone Operating System.
+            </p>
+          </div>
+
+          <!-- Column 3: 24/7 IT Support -->
+          <div class="feature-card-col">
+            <div class="feature-card-circle-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">24/7 IT Support</h3>
+            <p class="feature-card-desc">
+              Dedicated 24/7 IT Support for managed clients, technical infrastructure, and system stability.
+            </p>
+          </div>
+
+          <!-- Column 4: Custom Request -->
+          <div class="feature-card-col">
+            <div class="feature-card-circle-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Custom Request</h3>
+            <p class="feature-card-desc">
+              Tailored software development, custom integrations, and consultation services built to your exact needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="mission-vision-grid">
+        <MissionVisionCard
+          type="mission"
+          statement="Our mission is to better software development by being Innovative, Agile and bringing together capable, driven and passionate people."
+        />
+
+        <MissionVisionCard
+          type="vision"
+          statement="We believe to build long term relationship with client and agencies."
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 03: Services (Artistic 2-Column Section Header & Card Structure) -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="artistic-section-header">
+        <div class="section-header-left">
+          <span class="eyebrow">SERVICES</span>
+          <h2 class="section-title">Our Digital IT <span>Services</span></h2>
+        </div>
+        <div class="section-header-right">
+          <p class="section-header-desc">
+            High-performance, secure software engineering and design built to elevate your business operations and digital market reach.
+          </p>
+          <a href="/it/services/" class="btn btn-outline btn-sm">
+            <span>See All Services</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <!-- 01 Web Development -->
+        <div class="service-card-item">
+          <span class="service-card-number">01</span>
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Web Development</h3>
+          <p class="service-card-desc">
+            At Pearl Infotech, we believe in delivering a web development solution that brings results for your business.
+          </p>
+          <a href="/it/web-development/" class="service-read-more">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 02 Android Development -->
+        <div class="service-card-item">
+          <span class="service-card-number">02</span>
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Android Development</h3>
+          <p class="service-card-desc">
+            We provide exceptional custom Android application development services to clients all over the world.
+          </p>
+          <a href="/it/android-development/" class="service-read-more">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 03 iPhone Development -->
+        <div class="service-card-item">
+          <span class="service-card-number">03</span>
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <circle cx="12" cy="18" r="1"></circle>
+            </svg>
+          </div>
+          <h3 class="service-card-title">iPhone Development</h3>
+          <p class="service-card-desc">
+            We are one of the leading iOS app development companies, and we provide efficient iPhone app development solutions.
+          </p>
+          <a href="/it/ios-development/" class="service-read-more">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 04 Quality Assurance -->
+        <div class="service-card-item">
+          <span class="service-card-number">04</span>
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Quality Assurance</h3>
+          <p class="service-card-desc">
+            Efficient and successful solutions are those that are free from any errors or defects. If you need a quality assurance service for your existing solutions, you can rely on our experience, expertise, and quality assurance testing methods.
+          </p>
+          <a href="/it/quality-assurance/" class="service-read-more">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 05 UI/UX Design -->
+        <div class="service-card-item">
+          <span class="service-card-number">05</span>
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="service-card-title">UI/UX Design</h3>
+          <p class="service-card-desc">
+            Having a beautiful website today is no longer an option, but a necessity as it helps businesses connect to their prospective customers. We are the best web design company which help clients to deal with their unique website requirements.
+          </p>
+          <a href="/it/ui-ux-design/" class="service-read-more">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- 06 Wearables App Development -->
+        <div class="service-card-item">
+          <span class="service-card-number">06</span>
+          <div class="service-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="7"></circle>
+              <polyline points="12 9 12 12 13.5 13.5"></polyline>
+              <path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path>
+            </svg>
+          </div>
+          <h3 class="service-card-title">Wearables App Development</h3>
+          <p class="service-card-desc">
+            We are one of the leading wearable device application development companies, and we provide remarkable Apple Watch App development and Android Wear App development solutions.
+          </p>
+          <a href="/it/wearable-app-development/" class="service-read-more">
+            <span>Read More</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 04 & 05: Works About / Company Overview & Completed Projects (Artistic Social-Media-Marketing About Box Layout) -->
+  <section class="section section-alt works-about-section">
+    <div class="container">
+      <div class="artistic-about-box">
+        <!-- Visual Image & Project Counter (Left Column in Artistic) -->
+        <div class="artistic-about-image-col">
+          <div class="artistic-about-img-frame">
+            <img
+              src="/assets/images/works-about.jpg"
+              alt="Pearl Infotech Development Team"
+              class="works-img"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <!-- Artistic Floating Experience Pill Badge -->
+            <div class="artistic-experience-badge">
+              <div class="exp-counter-box">
+                <span class="exp-number" id="projectsCounter" data-target={COMPANY_STATS.projectsDeliveredCount}>{COMPANY_STATS.projectsDelivered}</span>
+              </div>
+              <div class="exp-content">
+                <span class="exp-title">Completed Projects</span>
+                <span class="exp-sub">Enterprise Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Side (Right Column in Artistic) -->
+        <div class="artistic-about-content-col">
+          <div class="section-title-wrap">
+            <span class="eyebrow">ABOUT US</span>
+            <h2 class="artistic-heading">
+              Developing <span>Amazing Things</span> with Passion
+            </h2>
+          </div>
+          <p class="works-about-paragraph">
+            Pearl Infotech believe to build long term relationship with client and agencies. Our specialists are fit for working in a large portion of the technologies and platforms. We offer top-notch subjective assistance by creating robust, secured, and high-performing website development that gives the best client experience. Having years of involvement in the custom Website & Mobile Application development field, we have expertise in building complex arrangements according to the changing requirements of the business.
+          </p>
+
+          <!-- Artistic Mini Feature Badges List -->
+          <div class="artistic-about-list">
+            <div class="artistic-list-item">
+              <div class="artistic-list-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="artistic-list-text">
+                <h4>{COMPANY_STATS.clientSatisfaction} Client Satisfaction</h4>
+              </div>
+            </div>
+
+            <div class="artistic-list-item">
+              <div class="artistic-list-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="artistic-list-text">
+                <h4>Professional Project Flows</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="artistic-about-footer">
+            <a href="/it/contact-us/" class="btn btn-primary btn-sm">
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 06: Testimonials (Artistic 2-Column Section Header & Owl Carousel) -->
+  <section class="section">
+    <div class="container">
+      <div class="artistic-section-header">
+        <div class="section-header-left">
+          <span class="eyebrow">TESTIMONIALS</span>
+          <h2 class="section-title">What <span>People Say</span></h2>
+        </div>
+        <div class="section-header-right">
+          <p class="section-header-desc">
+            Honest feedback from technology leaders and clients who trust Pearl Infotech to engineer their digital products.
+          </p>
+          <a href="/it/contact-us/" class="btn btn-outline btn-sm">
+            <span>Contact Us</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Owl Carousel Container (exact user structure) -->
+      <div class="owl-carousel owl-theme testimonials-carousel">
+        <!-- Testimonial 01: Ocean Babs -->
+        <div class="item">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 stars rating">
+              ★★★★★
+                </div>
+            <p class="testimonial-quote">
+              “Pearl Infotech team is a life saver. I have had very big problem with my Web Devlopment. I have just found em as friendly and problem solver. 100% Recommended”
+            </p>
+            <div class="testimonial-author">
+              <img src="/assets/images/user-picture.png" alt="Ocean Babs" class="author-avatar" width="48" height="48" />
+              <div class="author-meta">
+                <h4 class="author-name">Ocean Babs</h4>
+                <span class="author-role">Head of IT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 02: Jacob Osman -->
+        <div class="item">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 stars rating">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              “I love the Service and Product Quality. It's Awesome!. Pearl Infotech has a great knowledge of Graphic and relevant work knowledge. I am happy.”
+            </p>
+            <div class="testimonial-author">
+              <img src="/assets/images/user-picture.png" alt="Jacob Osman" class="author-avatar" width="48" height="48" />
+                <div class="author-meta">
+                <h4 class="author-name">Jacob Osman</h4>
+                <span class="author-role">Marketing</span>
+                </div>
+          </div>
+          </div>
+      </div>
+
+        <!-- Testimonial 03: Adam Jones -->
+            <div class="item">
+              <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 stars rating">
+              ★★★★★
+                </div>
+                <p class="testimonial-quote">
+              “Pearl Infotech is a real Problem Solver. Skilled and professional Employee with Quick Support. I must recommend to take Service of Pearl Infotech. Cheers!!”
+                </p>
+                <div class="testimonial-author">
+              <img src="/assets/images/user-picture.png" alt="Adam Jones" class="author-avatar" width="48" height="48" />
+                  <div class="author-meta">
+                <h4 class="author-name">Adam Jones</h4>
+                <span class="author-role">Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <!-- Testimonial 04: Ocean Babs (Smooth carousel extension) -->
+        <div class="item">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 stars rating">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              “Pearl Infotech team is a life saver. I have had very big problem with my Web Devlopment. I have just found em as friendly and problem solver. 100% Recommended”
+            </p>
+            <div class="testimonial-author">
+              <img src="/assets/images/user-picture.png" alt="Ocean Babs" class="author-avatar" width="48" height="48" />
+              <div class="author-meta">
+                <h4 class="author-name">Ocean Babs</h4>
+                <span class="author-role">Head of IT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 05: Jacob Osman (Smooth carousel extension) -->
+        <div class="item">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 stars rating">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              “I love the Service and Product Quality. It's Awesome!. Pearl Infotech has a great knowledge of Graphic and relevant work knowledge. I am happy.”
+            </p>
+            <div class="testimonial-author">
+              <img src="/assets/images/user-picture.png" alt="Jacob Osman" class="author-avatar" width="48" height="48" />
+              <div class="author-meta">
+                <h4 class="author-name">Jacob Osman</h4>
+                <span class="author-role">Marketing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 06: Adam Jones (Smooth carousel extension) -->
+        <div class="item">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 stars rating">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              “Pearl Infotech is a real Problem Solver. Skilled and professional Employee with Quick Support. I must recommend to take Service of Pearl Infotech. Cheers!!”
+            </p>
+            <div class="testimonial-author">
+              <img src="/assets/images/user-picture.png" alt="Adam Jones" class="author-avatar" width="48" height="48" />
+              <div class="author-meta">
+                <h4 class="author-name">Adam Jones</h4>
+                <span class="author-role">Designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 07: Consultation Form & Google Maps -->
+  <ConsultationSection
+    title="Need Help?"
+    subtitle="Reach out to the world’s most reliable IT services."
+  />
+</Layout>
+
+<script is:inline>
+  function initOwlCarousel() {
+    if (typeof jQuery !== 'undefined' && typeof jQuery.fn.owlCarousel !== 'undefined') {
+      const $carousel = $('.testimonials-carousel');
+      if ($carousel.length && !$carousel.hasClass('owl-loaded')) {
+        $carousel.owlCarousel({
+          loop: true,
+          margin: 24,
+          nav: true,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 4500,
+          autoplayHoverPause: true,
+          navText: [
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>',
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>'
+          ],
+          responsive: {
+            0: {
+              items: 1
+            },
+            768: {
+              items: 2
+            },
+            1024: {
+              items: 3
+            }
+          }
+        });
+      }
+    } else {
+      setTimeout(initOwlCarousel, 100);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initOwlCarousel);
+  } else {
+    initOwlCarousel();
+  }
+</script>
+
+<script>
+  // Subtle intersection observer for the counter animation
+  const counter = document.getElementById('projectsCounter');
+  if (counter) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          let count = 0;
+          const target = Number(counter.getAttribute('data-target') || 180);
+          const duration = 1200;
+          const stepTime = Math.abs(Math.floor(duration / target));
+          
+          const timer = setInterval(() => {
+            count += 3;
+            if (count >= target) {
+              counter.innerText = target + '+';
+              clearInterval(timer);
+            } else {
+              counter.innerText = count + '+';
+            }
+          }, stepTime);
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(counter);
+  }
+</script>
+
+<style>
+  /* =========================================================================
+     Hero Styles: Clean, Light Executive Artistic IT Agency Direction
+     Crisp Light Executive Canvas with High-Contrast Navy Typography & Sapphire Accents
+     ========================================================================= */
+  .hero-section {
+    position: relative;
+    background-color: var(--color-bg-secondary);
+    background-image: 
+      radial-gradient(circle at 85% 15%, rgba(0, 135, 202, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 10% 85%, rgba(0, 135, 202, 0.08) 0%, transparent 45%),
+      linear-gradient(180deg, #ffffff 0%, var(--color-bg-secondary) 100%);
+    color: var(--color-heading);
+    padding-top: clamp(4.5rem, 6.5vw, 6.5rem);
+    padding-bottom: clamp(4rem, 6vw, 5.5rem);
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Ribbed / Embossed Geometric Tech Pattern Overlay */
+  .hero-pattern-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    background-image: 
+      repeating-linear-gradient(
+        -55deg,
+        rgba(0, 135, 202, 0.05) 0px,
+        rgba(0, 135, 202, 0.05) 1.5px,
+        transparent 1.5px,
+        transparent 24px
+      );
+    z-index: 1;
+  }
+
+  .hero-radial-glow {
+    position: absolute;
+    top: -10%;
+    right: 5%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(0, 135, 202, 0.12) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-main-row {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(2.5rem, 4.5vw, 4rem);
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .hero-main-row {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  .hero-content {
+    max-width: 650px;
+  }
+
+  .badge-asterisk {
+    color: var(--color-primary);
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  /* Big Bold Hero Title */
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-heading);
+    margin-bottom: 1.25rem;
+    text-transform: capitalize;
+  }
+
+  .hero-title .highlight {
+    color: var(--color-primary);
+  }
+
+  .hero-description {
+    font-size: clamp(0.975rem, 1.1vw, 1.0625rem);
+    line-height: 1.7;
+    color: var(--color-body);
+    margin-bottom: 2rem;
+    max-width: 56ch;
+  }
+
+  /* Hero Action Buttons (/it/contact-us/ and /it/about-us/) */
+  .hero-actions-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.25rem;
+  }
+
+
+
+  /* Dual Proof & Action Block (Rating box + Circular rotating CTA) */
+  .hero-dual-body {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  @media (min-width: 991.98px) and (max-width: 1198.98px){
+    .hero-dual-body{
+      gap: 0.5rem;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .hero-dual-body {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  /* 5.0 Star Rating Box */
+  .hero-rating-box {
+    padding-right: 2rem;
+    border-right: 1px solid var(--color-border);
+  }
+
+  @media (min-width: 991.98px) and (max-width: 1198.98px){
+    .hero-rating-box{
+      padding-right: 0.5rem;
+    }
+  }
+
+  @media (max-width: 580px) {
+    .hero-rating-box {
+      padding-right: 0;
+      border-right: none;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+      width: 100%;
+    }
+  }
+
+  .rating-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .rating-number {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-heading);
+    letter-spacing: -0.02em;
+  }
+
+  .rating-count {
+    font-size: 0.8125rem;
+    color: var(--color-body);
+    font-weight: 600;
+  }
+
+  .rating-stars {
+    color: #eab308;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.4rem;
+  }
+
+  .rating-caption {
+    font-size: 0.8125rem;
+    color: var(--color-body);
+    margin: 0;
+    line-height: 1.4;
+    max-width: 22ch;
+  }
+
+  /* Rotating CTA Wrap */
+  .hero-cta-circle-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 991.98px) and (max-width: 1198.98px){
+    .hero-cta-circle-wrap{
+      gap: 0.5rem;
+    }
+  }
+
+  .cta-micro-text {
+    font-size: 0.9375rem;
+    color: var(--color-heading);
+    font-weight: 600;
+    line-height: 1.45;
+    max-width: 18ch;
+    margin: 0;
+  }
+
+  /* Circular rotating badge CTA button */
+  .hero-rotating-cta {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hero-rotating-cta:hover {
+    transform: scale(1.08);
+  }
+
+  .cta-svg-text {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--color-primary);
+    animation: rotateCtaText 14s linear infinite;
+    transform-origin: center center;
+  }
+
+  @keyframes rotateCtaText {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .cta-center-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 200ms ease, transform 200ms ease;
+    z-index: 2;
+  }
+
+  .hero-rotating-cta:hover .cta-center-arrow {
+    background: var(--color-primary-hover);
+    transform: rotate(45deg);
+  }
+
+  /* =========================================================================
+     Visual Multi-Image Collage Column (Artistic Layout)
+     ========================================================================= */
+  .hero-image-column {
+    position: relative;
+    width: 100%;
+  }
+
+  .hero-collage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .collage-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 20px 40px -10px rgba(0, 29, 76, 0.12), 0 0 20px rgba(0, 135, 202, 0.08);
+    background: #e2e8f0;
+  }
+
+  .collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Left tall card */
+  .collage-card-tall {
+    height: 470px;
+  }
+
+  /* Right stack with 2 cards */
+  .collage-right-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 470px;
+  }
+
+  .collage-card-top,
+  .collage-card-bottom {
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Satisfied Client Pill Badge (Bottom Overlap) */
+  .hero-satisfied-badge {
+    position: absolute;
+    bottom: -16px;
+    left: 10%;
+    z-index: 4;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    box-shadow: 0 16px 36px rgba(0, 29, 76, 0.12);
+  }
+
+  .badge-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--color-primary-subtle);
+    color: var(--color-primary);
+    border: 1px solid rgba(0, 135, 202, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .badge-content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .badge-content strong {
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-weight: 800;
+    color: var(--color-heading);
+  }
+
+  .badge-content span {
+    font-size: 0.75rem;
+    color: var(--color-body);
+    font-weight: 600;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .hero-main-row {
+      gap: 2rem;
+    }
+    .collage-card-tall {
+      height: 420px;
+    }
+    .collage-right-stack {
+      height: 420px;
+    }
+    .hero-satisfied-badge {
+      left: 4%;
+      padding: 0.625rem 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-collage {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .collage-card-tall {
+      height: 280px;
+    }
+    .collage-right-stack {
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .collage-card-top,
+    .collage-card-bottom {
+      height: 160px;
+    }
+    .hero-satisfied-badge {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      margin: 0.75rem auto 0;
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .collage-card-tall {
+      height: 220px;
+    }
+    .collage-right-stack {
+      grid-template-columns: 1fr;
+    }
+    .collage-card-top,
+    .collage-card-bottom {
+      height: 150px;
+    }
+  }
+
+  /* Disable animations under prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .cta-svg-text {
+      animation: none !important;
+    }
+    .circle-badge-inner {
+      animation: none !important;
+    }
+    .collage-img {
+      transition: none !important;
+    }
+  }
+
+  /* =========================================================================
+     Section 02: Artistic "What We Do / Elevate Your Brand" 4-Column Panel
+     Styled exactly as per reference image using theme CSS variables
+     ========================================================================= */
+  .section-features {
+    padding-top: clamp(3.5rem, 5vw, 5rem);
+    padding-bottom: clamp(3.5rem, 5vw, 5rem);
+  }
+
+  /* Sleek rounded clean container matching light executive theme */
+  .artistic-feature-panel {
+    background-color: #ffffff;
+    background-image:
+      radial-gradient(ellipse 70% 60% at 20% 25%, rgba(0, 135, 202, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 65% 55% at 85% 75%, rgba(0, 135, 202, 0.05) 0%, transparent 60%),
+      linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid var(--color-border);
+    border-radius: 28px;
+    padding: clamp(2rem, 3.5vw, 3rem);
+    box-shadow: 0 20px 45px -10px rgba(0, 29, 76, 0.08), 0 2px 10px rgba(0, 0, 0, 0.02);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 4-Column Horizontal Layout */
+  .feature-layout-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr 1fr;
+    gap: clamp(1rem, 1.8vw, 2rem);
+    align-items: stretch;
+  }
+
+  @media (max-width: 1023.98px) {
+    .feature-layout-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .feature-layout-grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+  }
+
+  /* Column 1: Left Brand Column */
+  .feature-brand-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    text-transform: capitalize;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .feature-main-title .highlight {
+    color: var(--color-primary);
+  }
+
+  /* Contact Us CTA Pill */
+  .feature-cta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+    background: var(--color-primary-subtle);
+    border: 1px solid rgba(0, 135, 202, 0.25);
+    border-radius: var(--radius-sm);
+    padding: 0.45rem 0.45rem 0.45rem 1.35rem;
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .feature-cta-pill:hover {
+    background: #dbeafe;
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 135, 202, 0.15);
+  }
+
+  .pill-arrow-bubble {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease;
+  }
+
+  .feature-cta-pill:hover .pill-arrow-bubble {
+    background: var(--color-primary-hover);
+    transform: rotate(45deg);
+  }
+
+  /* Feature Card Columns (Cards 2, 3, 4) */
+  .feature-card-col {
+    background: #ffffff;
+    border-radius: var(--card-radius);
+    padding: clamp(1.75rem, 2.5vw, 2rem) clamp(1.25rem, 1.8vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 18px rgba(0, 29, 76, 0.04);
+    transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Distinct Circular Icon matching reference */
+  .feature-card-circle-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-subtle);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 135, 202, 0.2);
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease, color 200ms ease;
+  }
+
+  .feature-card-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 1.4vw, 1.35rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    margin-bottom: 0.875rem;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    text-transform: capitalize;
+  }
+
+  .feature-card-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-body);
+    margin: 0;
+  }
+
+  .mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.75rem, 3vw, 2.5rem);
+    align-items: stretch;
+  }
+
+  @media (max-width: 767.98px) {
+    .mission-vision-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  /* =========================================================================
+     Services Grid (Artistic Creative Agency Card Layout)
+     ========================================================================= */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  @media (max-width: 991px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Artistic Creative Agency Service Card */
+  .service-card-item {
+    background: #ffffff;
+    border: 1px solid rgba(0, 29, 76, 0.08);
+    border-radius: var(--card-radius);
+    padding: clamp(2rem, 2.8vw, 2.375rem);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(17, 28, 58, 0.04);
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 300ms ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Top accent gradient line (matches mv-card sheen) */
+  .service-card-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-primary) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: 2;
+  }
+
+  /* Artistic Ambient radial hover glow */
+  .service-card-item::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 135, 202, 0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease, transform 300ms ease;
+    z-index: 0;
+  }
+
+  .service-card-item:hover {
+    border-color: rgba(0, 135, 202, 0.35);
+    transform: translateY(-8px);
+  }
+
+  .service-card-item:hover::before {
+    opacity: 1;
+  }
+
+  .service-card-item:hover::after {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  /* Artistic Pill Step/Service Badge */
+  .service-card-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.75rem;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #94a3b8;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(0, 29, 76, 0.06);
+    border-radius: 12px;
+    padding: 0.35rem 0.85rem;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    pointer-events: none;
+    transition: all 260ms ease;
+    z-index: 1;
+  }
+
+  .service-card-item:hover .service-card-number {
+    color: var(--color-primary);
+    background: var(--color-primary-subtle);
+    border-color: rgba(0, 135, 202, 0.25);
+    transform: translateY(-2px);
+  }
+
+  /* Artistic Elevated Icon Box */
+  .service-icon-box {
+    width: 58px;
+    height: 58px;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-subtle);
+    color: var(--color-primary);
+    border: 1px solid rgba(0, 135, 202, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.875rem;
+    transition: all 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-card-item:hover .service-icon-box {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #006ca3 100%);
+    color: #ffffff;
+    border-color: var(--color-primary);
+  }
+
+  .service-card-title {
+    font-size: clamp(1.2rem, 1.35vw, 1.375rem);
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 0.875rem;
+    letter-spacing: -0.02em;
+    transition: color var(--transition-fast);
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-card-item:hover .service-card-title {
+    color: var(--color-primary);
+  }
+
+  .service-card-desc {
+    font-size: clamp(0.9375rem, 1vw, 1rem);
+    color: var(--color-body);
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Artistic Pill Link Button */
+  .service-read-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.65rem 1.125rem;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(0, 29, 76, 0.06);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    transition: all 260ms ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-read-more svg {
+    color: var(--color-primary);
+    transition: transform 260ms ease, color 260ms ease;
+  }
+
+  .service-card-item:hover .service-read-more {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+  }
+
+  .service-card-item:hover .service-read-more svg {
+    color: #ffffff;
+    transform: translateX(4px);
+  }
+
+  /* Services bottom callout */
+  .services-bottom-callout {
+    margin-top: 3.5rem;
+    padding: 1.875rem 2.75rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 29, 76, 0.08);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: 0 4px 20px rgba(17, 28, 58, 0.04);
+  }
+
+  @media (max-width: 768px) {
+    .services-bottom-callout {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.75rem;
+    }
+  }
+
+  .callout-text {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    letter-spacing: -0.015em;
+  }
+
+  /* =========================================================================
+     Artistic Scrolling Marquee Ticker
+     ========================================================================= */
+  .artistic-ticker-wrap {
+    background: #001d4c;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 3;
+  }
+
+  .artistic-ticker {
+    display: flex;
+    width: max-content;
+    animation: tickerScroll 28s linear infinite;
+  }
+
+  @keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .artistic-ticker {
+      animation: none !important;
+    }
+  }
+
+  .ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-right: 3rem;
+  }
+
+  .ticker-track span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .ticker-track span svg {
+    color: var(--color-primary);
+  }
+
+  /* =========================================================================
+     Artistic 2-Column Section Header
+     ========================================================================= */
+  .artistic-section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .section-header-left {
+    max-width: 600px;
+  }
+
+  .section-header-left .section-title {
+    margin-bottom: 0;
+  }
+
+  .section-header-left .section-title span {
+    color: var(--color-primary);
+  }
+
+  .section-header-right {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .section-header-desc {
+    font-size: clamp(1rem, 1.1vw, 1.0625rem);
+    color: var(--color-body);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  @media (max-width: 860px) {
+    .artistic-section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+  }
+
+  /* =========================================================================
+     Artistic Social Media Marketing About Box
+     ========================================================================= */
+  .artistic-about-box {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .artistic-about-box {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  .artistic-about-image-col {
+    position: relative;
+    width: 100%;
+  }
+
+  .artistic-about-img-frame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 29, 76, 0.08);
+    box-shadow: 0 20px 48px -12px rgba(0, 29, 76, 0.16);
+    background: #ffffff;
+  }
+
+  .works-img,
+  :global(.works-img) {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--card-radius);
+    transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Artistic Floating Experience Pill Badge (Matches Reference Satisficed/Exp Badge) */
+  .artistic-experience-badge {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 1.75rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 135, 202, 0.16);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem 1.75rem;
+    box-shadow: 0 20px 45px -12px rgba(0, 29, 76, 0.22), 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 1.125rem;
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  @media (max-width: 580px) {
+    .artistic-experience-badge {
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      padding: 0.875rem 1.25rem;
+      gap: 0.875rem;
+    }
+  }
+
+  .project-stat-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 50px -10px rgba(0, 135, 202, 0.28), 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .exp-counter-box {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .exp-number {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-heading);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .exp-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .exp-title {
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-heading);
+  }
+
+  .exp-sub {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .artistic-about-content-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .artistic-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.25rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--color-heading);
+    letter-spacing: -0.03em;
+    text-transform: capitalize;
+    margin-bottom: 1.25rem;
+  }
+
+  .artistic-heading span {
+    color: var(--color-primary);
+  }
+
+  .works-about-paragraph {
+    font-size: clamp(1rem, 1.1vw, 1.0625rem);
+    line-height: 1.8;
+    color: var(--color-body);
+    margin-bottom: 2rem;
+  }
+
+  /* Artistic Mini Feature Badges List */
+  .artistic-about-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  @media (max-width: 600px) {
+    .artistic-about-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .artistic-list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 29, 76, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 0.875rem 1.125rem;
+    box-shadow: 0 2px 8px rgba(17, 28, 58, 0.03);
+    transition: transform 200ms ease, border-color 200ms ease;
+  }
+
+  .artistic-list-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-subtle);
+    color: var(--color-primary);
+    border: 1px solid rgba(0, 135, 202, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .artistic-list-text h4 {
+    font-family: var(--font-heading);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .artistic-about-footer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* =========================================================================
+     Testimonials Owl Carousel (Artistic Agency Style)
+     ========================================================================= */
+  .testimonials-carousel {
+    position: relative;
+    padding-bottom: 3.5rem;
+    display: block;
+    width: 100%;
+  }
+
+  :global(.testimonials-carousel .owl-stage-outer) {
+    padding: 16px 8px 28px !important;
+    margin: 0 -8px !important;
+    overflow: hidden;
+  }
+
+  :global(.testimonials-carousel .owl-stage) {
+    display: flex !important;
+    align-items: stretch !important;
+  }
+
+  :global(.testimonials-carousel .owl-item) {
+    display: flex !important;
+    height: auto !important;
+  }
+
+  :global(.testimonials-carousel .item) {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+  }
+
+  /* Artistic elevated testimonial card with quote watermark */
+  .testimonial-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 29, 76, 0.08);
+    border-radius: var(--card-radius);
+    padding: clamp(2rem, 2.5vw, 2.25rem);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(17, 28, 58, 0.04);
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 300ms ease,
+                box-shadow 300ms ease;
+    position: relative;
+    width: 100%;
+    min-height: 290px;
+    box-sizing: border-box;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Artistic top primary gradient bar */
+  .testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), #38bdf8);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+
+  /* Artistic stylized background quotation watermark */
+  .testimonial-card::after {
+    content: '“';
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    font-family: Georgia, serif;
+    font-size: 6.5rem;
+    line-height: 1;
+    color: rgba(0, 135, 202, 0.06);
+    pointer-events: none;
+    z-index: 0;
+    transition: color 300ms ease, transform 300ms ease;
+  }
+
+  .testimonial-stars {
+    color: #F59E0B;
+    font-size: 1.125rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonial-quote {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--color-heading);
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(0, 29, 76, 0.07);
+    padding-top: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .author-avatar {
+    border-radius: var(--radius-sm);
+    background: #E2E8F0;
+    flex-shrink: 0;
+    width: 48px !important;
+    height: 48px;
+    border: 2px solid var(--color-primary-subtle);
+    transition: border-color 260ms ease;
+  }
+
+  .author-name {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 0.125rem;
+  }
+
+  .author-role {
+    font-size: 0.8125rem;
+    color: var(--color-body);
+  }
+
+  /* Owl Carousel Navigation Arrows */
+  :global(.testimonials-carousel .owl-nav) {
+    position: absolute;
+    bottom: 0;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem;
+    margin: 0 !important;
+    width: auto !important;
+    z-index: 10;
+  }
+
+  :global(.testimonials-carousel .owl-nav button.owl-prev),
+  :global(.testimonials-carousel .owl-nav button.owl-next) {
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: var(--radius-sm) !important;
+    background: #ffffff !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-heading) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all var(--transition-fast) !important;
+    cursor: pointer;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  :global(.testimonials-carousel .owl-nav button.owl-prev:hover),
+  :global(.testimonials-carousel .owl-nav button.owl-next:hover) {
+    background: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-carousel {
+      padding-bottom: 4.5rem;
+    }
+
+    :global(.testimonials-carousel .owl-nav) {
+      position: absolute;
+      bottom: 0;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      display: flex !important;
+      justify-content: center !important;
+      margin: 0 auto !important;
+    }
+  }
+
+  /* Owl Carousel Pagination Dots */
+  :global(.testimonials-carousel .owl-dots) {
+    display: none;
+  }
+
+  :global(.testimonials-carousel .owl-dots .owl-dot) {
+    outline: none;
+  }
+
+  :global(.testimonials-carousel .owl-dots .owl-dot span) {
+    width: 8px !important;
+    height: 8px !important;
+    margin: 0 !important;
+    background: #cbd5e1 !important;
+    border-radius: var(--radius-sm) !important;
+    transition: all var(--transition-fast) !important;
+  }
+
+  :global(.testimonials-carousel .owl-dots .owl-dot.active span) {
+    width: 26px !important;
+    background: var(--color-primary) !important;
+  }
+
+  :global(.testimonials-carousel .owl-dots .owl-dot:hover span) {
+    background: var(--color-primary) !important;
+  }
+</style>

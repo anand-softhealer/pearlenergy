@@ -1,0 +1,146 @@
+---
+import { COMPANY_STATS } from '../data/stats';
+
+interface Props {
+  type: 'mission' | 'vision';
+  class?: string;
+  statement?: string; // Optional custom copy override, otherwise uses standard
+}
+
+const { type, class: className = '', statement } = Astro.props;
+
+const isMission = type === 'mission';
+
+const defaultStatement = isMission
+  ? "Our mission is to better software development by being Innovative, Agile and bringing together capable, driven and passionate people."
+  : "We believe to build long term relationship with client and agencies by continuously delivering secure, scalable, and high-performing digital assets.";
+
+const finalStatement = statement || defaultStatement;
+
+// Proof point sourced from single-source-of-truth COMPANY_STATS
+const proofValue = isMission ? COMPANY_STATS.projectsDelivered : COMPANY_STATS.clientSatisfaction;
+const proofLabel = isMission ? "Commercial Projects Delivered" : "Client Satisfaction Rating";
+const badgeLabel = isMission ? "Our Foundation" : "Our Commitment";
+---
+
+<div class={`mv-card mv-card-${type} ${className}`} tabindex="0">
+  <div class="card-sheen" aria-hidden="true"></div>
+  <div class="card-inner">
+    <div class="card-top">
+      <div class="mv-icon-box" aria-hidden="true">
+        {isMission ? (
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+        ) : (
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        )}
+      </div>
+      <span class="mv-badge">{badgeLabel}</span>
+    </div>
+
+    <h3 class="mv-title">{isMission ? "Our Mission" : "Our Vision"}</h3>
+    
+    <p class="mv-statement">
+      {finalStatement}
+    </p>
+  </div>
+</div>
+
+<style>
+  .mv-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-radius);
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: var(--shadow-soft-sm), 0 4px 16px -4px rgba(0, 29, 76, 0.04);
+    overflow: hidden;
+    outline: none;
+    transition: all var(--transition-base);
+    box-sizing: border-box;
+  }
+
+  .card-sheen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, var(--color-primary) 50%, transparent 100%);
+    opacity: 1;
+    transition: opacity var(--transition-base);
+  }
+
+  .card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .mv-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--color-primary-subtle);
+    border: 1px solid rgba(0, 135, 202, 0.15);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+  }
+
+  .mv-badge {
+    font-family: var(--font-heading);
+    font-size: 0.6875rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    background: var(--color-primary-subtle);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--card-radius);
+  }
+
+  .mv-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2vw, 1.75rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    letter-spacing: -0.025em;
+    margin-bottom: 0.875rem;
+    line-height: 1.2;
+  }
+
+  .mv-statement {
+    font-size: clamp(0.95rem, 1.05vw, 1.03125rem);
+    line-height: 1.75;
+    color: var(--color-body);
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mv-card,
+    .card-sheen,
+    .mv-icon-box {
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+</style>

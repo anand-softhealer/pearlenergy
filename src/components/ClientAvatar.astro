@@ -1,0 +1,82 @@
+---
+interface Props {
+  name: string;
+  image?: string;
+  size?: number;
+  class?: string;
+}
+
+const { name, image, size = 48, class: className = '' } = Astro.props;
+
+// Compute 2-letter initials from name
+const getInitials = (fullName: string) => {
+  const parts = fullName.trim().split(/\s+/);
+  if (parts.length >= 2) {
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  }
+  return (parts[0] ? parts[0].slice(0, 2) : 'PI').toUpperCase();
+};
+
+const initials = getInitials(name);
+---
+
+<div class:list={['client-avatar-wrapper', className]} style={`width: ${size}px; height: ${size}px;`}>
+  {image ? (
+    <img
+      src={image}
+      alt={name}
+      width={size}
+      height={size}
+      class="client-avatar-img"
+      loading="lazy"
+    />
+  ) : (
+    <div
+      class="client-avatar-fallback"
+      style={`width: ${size}px; height: ${size}px; font-size: ${Math.round(size * 0.38)}px;`}
+      aria-label={name}
+      title={name}
+    >
+      <span>{initials}</span>
+    </div>
+  )}
+</div>
+
+<style>
+  .client-avatar-wrapper {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .client-avatar-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    display: block;
+  }
+
+  .client-avatar-fallback {
+    background: #001d4c; /* Navy brand secondary */
+    color: #ffffff;
+    border: 2px solid rgba(0, 135, 202, 0.4);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--font-heading, inherit);
+    letter-spacing: 0.05em;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0, 29, 76, 0.25);
+  }
+
+  .client-avatar-fallback span {
+    line-height: 1;
+    transform: translateY(0.5px);
+  }
+</style>
