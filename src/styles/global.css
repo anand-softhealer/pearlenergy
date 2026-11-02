@@ -434,6 +434,11 @@ ul, ol {
   transition: all var(--transition-fast);
 }
 
+.form-textarea {
+  resize: vertical;
+  min-height: 7rem;
+}
+
 .form-input:focus, .form-textarea:focus {
   outline: none;
   border-color: var(--color-primary);
