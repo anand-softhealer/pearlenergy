@@ -6,12 +6,19 @@
     "node": ">=22.23.4"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --force",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.4.2"
+    "@astrojs/react": "^7.1.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.66.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.3"
   }
 }
